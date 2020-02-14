@@ -2,6 +2,8 @@ module code.gitea.io/gitea
 
 go 1.13
 
+replace github.com/markbates/goth => github.com/azah/goth v1.61.2-0.20200212182416-b2f29beb64fa
+
 require (
 	cloud.google.com/go v0.45.0 // indirect
 	gitea.com/lunny/levelqueue v0.2.0

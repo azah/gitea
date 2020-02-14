@@ -22,6 +22,7 @@ import (
 	"github.com/markbates/goth/providers/github"
 	"github.com/markbates/goth/providers/gitlab"
 	"github.com/markbates/goth/providers/google"
+	"github.com/markbates/goth/providers/logingov"
 	"github.com/markbates/goth/providers/openidConnect"
 	"github.com/markbates/goth/providers/twitter"
 	"github.com/satori/go.uuid"
@@ -126,6 +127,11 @@ func createProvider(providerName, providerType, clientID, clientSecret, openIDCo
 	switch providerType {
 	case "bitbucket":
 		provider = bitbucket.New(clientID, clientSecret, callbackURL, "account")
+	case "logingov":
+		provider, err = logingov.New(clientID, callbackURL, "", "email")
+		if err != nil {
+			return provider, err
+		}
 	case "dropbox":
 		provider = dropbox.New(clientID, clientSecret, callbackURL)
 	case "facebook":

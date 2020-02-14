@@ -25,6 +25,7 @@ var OAuth2Providers = map[string]OAuth2Provider{
 	"bitbucket": {Name: "bitbucket", DisplayName: "Bitbucket", Image: "/img/auth/bitbucket.png"},
 	"dropbox":   {Name: "dropbox", DisplayName: "Dropbox", Image: "/img/auth/dropbox.png"},
 	"facebook":  {Name: "facebook", DisplayName: "Facebook", Image: "/img/auth/facebook.png"},
+	"logingov":  {Name: "logingov", DisplayName: "Login.gov", Image: "/img/auth/github.png"},
 	"github": {Name: "github", DisplayName: "GitHub", Image: "/img/auth/github.png",
 		CustomURLMapping: &oauth2.CustomURLMapping{
 			TokenURL:   oauth2.GetDefaultTokenURL("github"),
